@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  viewCode_App
+//  iMessage
 //
-//  Created by Fabio Martinez on 24/02/22.
+//  Created by Fabio Martinez on 06/03/22.
 //
 
 import UIKit
@@ -33,25 +33,21 @@ class LoginVC: UIViewController {
 
 extension LoginVC: LoginScreenProtocol {
     func actionLoginButton() {
+
+        guard let login = self.loginScreen else {return}
         
-        let vc:HomeVC = HomeVC()
-        self.navigationController?.pushViewController(vc, animated: true)
-    
-        
-//        guard let login = self.loginScreen else {return}
-//        
-//        self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { (usuario, error) in
-//            
-//            if error != nil {
-//                print("Incorrect data input, please check and try again!")
-//            } else {
-//                if usuario == nil {
-//                    print("Internal problem, try again later, please!")
-//                } else {
-//                    print("Login successful! Yeah! ")
-//                }
-//            }
-//        })
+        self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { (usuario, error) in
+            
+            if error != nil {
+                print("Incorrect data input, please check and try again!")
+            } else {
+                if usuario == nil {
+                    print("Internal problem, try again later, please!")
+                } else {
+                    print("Login successful! Yeah! ")
+                }
+            }
+        })
     }
     
     func actionRegisterButton() {
