@@ -7,6 +7,8 @@ iMessage Swift App
  Also, this project will be using a clean git history and best practices.
 
  Pictures and demo will be provided in the future.
+ 
+ <a href="https://ibb.co/QkQczDz"><img src="https://i.ibb.co/r30tTdT/Firebase-integration.png" alt="Firebase-integration" border="0"></a>
 
 ## Installation
 
