@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A40C10506B00F50DB0F23FFE /* Pods_iMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BADB01126476FA0673E6332 /* Pods_iMessage.framework */; };
+		CE2F526A27D6D0FC00BD3D35 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F526927D6D0FC00BD3D35 /* Extension+UIView.swift */; };
+		CE2F526C27D6D72D00BD3D35 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F526B27D6D72D00BD3D35 /* Custom.swift */; };
+		CE2F527227D6DB4600BD3D35 /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F527127D6DB4600BD3D35 /* Extension+Button.swift */; };
+		CE2F527427D6DCA000BD3D35 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F527327D6DCA000BD3D35 /* String.swift */; };
+		CE2F527727D6DF4600BD3D35 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE2F527627D6DF4600BD3D35 /* send.wav */; };
+		CE2F527A27D6F4C800BD3D35 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F527927D6F4C800BD3D35 /* Alert.swift */; };
 		CE82498E27D53B5C00FF581A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82498D27D53B5C00FF581A /* AppDelegate.swift */; };
 		CE82499027D53B5C00FF581A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82498F27D53B5C00FF581A /* SceneDelegate.swift */; };
 		CE82499727D53B5D00FF581A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE82499627D53B5D00FF581A /* Assets.xcassets */; };
@@ -22,6 +28,15 @@
 /* Begin PBXFileReference section */
 		1CC2E621D5FA219891BE7458 /* Pods-iMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessage.release.xcconfig"; path = "Target Support Files/Pods-iMessage/Pods-iMessage.release.xcconfig"; sourceTree = "<group>"; };
 		3BADB01126476FA0673E6332 /* Pods_iMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2F526927D6D0FC00BD3D35 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		CE2F526B27D6D72D00BD3D35 /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
+		CE2F526E27D6D98900BD3D35 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		CE2F526F27D6D99600BD3D35 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE2F527027D6D9A400BD3D35 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		CE2F527127D6DB4600BD3D35 /* Extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
+		CE2F527327D6DCA000BD3D35 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CE2F527627D6DF4600BD3D35 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = send.wav; sourceTree = "<group>"; };
+		CE2F527927D6F4C800BD3D35 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CE82498A27D53B5C00FF581A /* iMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE82498D27D53B5C00FF581A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE82498F27D53B5C00FF581A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +72,45 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CE2F526627D6CCB200BD3D35 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F526927D6D0FC00BD3D35 /* Extension+UIView.swift */,
+				CE2F526B27D6D72D00BD3D35 /* Custom.swift */,
+				CE2F527127D6DB4600BD3D35 /* Extension+Button.swift */,
+				CE2F527327D6DCA000BD3D35 /* String.swift */,
+				CE2F526D27D6D96900BD3D35 /* Fonts */,
+				CE2F527527D6DEFF00BD3D35 /* Sound */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE2F526D27D6D96900BD3D35 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F527027D6D9A400BD3D35 /* Poppins-Bold.ttf */,
+				CE2F526E27D6D98900BD3D35 /* Poppins-Medium.ttf */,
+				CE2F526F27D6D99600BD3D35 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CE2F527527D6DEFF00BD3D35 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F527627D6DF4600BD3D35 /* send.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		CE2F527827D6F4AE00BD3D35 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F527927D6F4C800BD3D35 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		CE82498127D53B5C00FF581A = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +132,8 @@
 		CE82498C27D53B5C00FF581A /* iMessage */ = {
 			isa = PBXGroup;
 			children = (
+				CE2F527827D6F4AE00BD3D35 /* Alert */,
+				CE2F526627D6CCB200BD3D35 /* Utils */,
 				CE8249A727D53EEC00FF581A /* Login */,
 				CE8249AC27D53EED00FF581A /* Register */,
 				CE82498D27D53B5C00FF581A /* AppDelegate.swift */,
@@ -210,6 +266,7 @@
 			files = (
 				CE82499A27D53B5D00FF581A /* LaunchScreen.storyboard in Resources */,
 				CE82499727D53B5D00FF581A /* Assets.xcassets in Resources */,
+				CE2F527727D6DF4600BD3D35 /* send.wav in Resources */,
 				CEF0D8FE27D54BF9000C579E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,10 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2F526A27D6D0FC00BD3D35 /* Extension+UIView.swift in Sources */,
 				CE8249B427D53EED00FF581A /* RegisterScreen.swift in Sources */,
+				CE2F527427D6DCA000BD3D35 /* String.swift in Sources */,
+				CE2F526C27D6D72D00BD3D35 /* Custom.swift in Sources */,
 				CE82498E27D53B5C00FF581A /* AppDelegate.swift in Sources */,
 				CE8249B227D53EED00FF581A /* LoginScreen.swift in Sources */,
 				CE82499027D53B5C00FF581A /* SceneDelegate.swift in Sources */,
+				CE2F527227D6DB4600BD3D35 /* Extension+Button.swift in Sources */,
+				CE2F527A27D6F4C800BD3D35 /* Alert.swift in Sources */,
 				CE8249B127D53EED00FF581A /* LoginVC.swift in Sources */,
 				CE8249B327D53EED00FF581A /* RegisterVC.swift in Sources */,
 			);
