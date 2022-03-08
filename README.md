@@ -10,7 +10,7 @@ iMessage Swift App
 
  Pictures and demo will be provided in the future.
  
- <a href="https://ibb.co/QkQczDz"><img src="https://i.ibb.co/r30tTdT/Firebase-integration.png" alt="Firebase-integration" border="0"></a>
+ <a href="https://ibb.co/Bs7PYzG"><img src="https://i.ibb.co/RHMSJvN/Firebase-integration.png" alt="Firebase-integration" border="0"></a>
 
 ## Installation
 
