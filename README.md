@@ -2,7 +2,9 @@
 iMessage Swift App
 
 
- This is an app build in Swift, with viewCode. It will have a loginScreen with advanced Firebase integration for database (listener).
+ This is an app build in Swift, with viewCode. It will have a loginScreen with advanced Firebase integration for database (listener). 
+ 
+ I will use this app, as an environment to study.
 
  Also, this project will be using a clean git history and best practices.
 
