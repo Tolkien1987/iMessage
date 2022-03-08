@@ -11,7 +11,7 @@ import Firebase
 class LoginVC: UIViewController {
     
     var auth: Auth?
-
+    var alert: Alert?
     var loginScreen: LoginScreen?
     
     override func loadView() {
@@ -23,6 +23,7 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         self.loginScreen?.delegate(delegate: self)
         self.loginScreen?.configTextFieldDelegate(delegate: self)
+        self.alert = Alert(controller: self)
         self.auth = Auth.auth()
     }
 
@@ -39,12 +40,12 @@ extension LoginVC: LoginScreenProtocol {
         self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { (usuario, error) in
             
             if error != nil {
-                print("Incorrect data input, please check and try again!")
+                self.alert?.getAlert(titulo: "Atenção", mensagem: "Atenção dados incorretos, verifique e tente novamente")
             } else {
                 if usuario == nil {
-                    print("Internal problem, try again later, please!")
+                    self.alert?.getAlert(titulo: "Atenção", mensagem: "Tivemos um problema inesperado, tente novamente mais tarde")
                 } else {
-                    print("Login successful! Yeah! ")
+                    self.alert?.getAlert(titulo: "Parabens", mensagem: "Usuario logado com sucesso!")
                 }
             }
         })

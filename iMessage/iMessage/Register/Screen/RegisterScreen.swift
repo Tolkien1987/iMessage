@@ -28,6 +28,18 @@ class RegisterScreen: UIView {
         return image
     }()
     
+    lazy var nameTextField: UITextField = {
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocorrectionType = .no
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        textField.keyboardType = .emailAddress
+        textField.placeholder = "Type your name"
+        textField.textColor = .darkGray
+        return textField
+    }()
+    
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -93,6 +105,7 @@ class RegisterScreen: UIView {
     }
     
     public func configTextFieldDelagate(delagate: UITextFieldDelegate) {
+        self.nameTextField.delegate = delagate
         self.emailTextField.delegate = delagate
         self.passwordTextField.delegate = delagate
     }
@@ -102,11 +115,11 @@ class RegisterScreen: UIView {
     }
     
     public func validateTextFields() {
-        
+        let name:String = self.nameTextField.text ?? ""
         let email:String = self.emailTextField.text ?? ""
         let password:String = self.passwordTextField.text ?? ""
         
-        if !email.isEmpty && !password.isEmpty {
+        if !name.isEmpty && !email.isEmpty && !password.isEmpty {
             self.configButtonEnable(true)
         } else {
             self.configButtonEnable(false)
@@ -123,6 +136,10 @@ class RegisterScreen: UIView {
         }
     }
     
+    public func getName() -> String {
+        return self.nameTextField.text ?? ""
+    }
+    
     public func getEmail() -> String {
         return self.emailTextField.text ?? ""
     }
@@ -133,6 +150,7 @@ class RegisterScreen: UIView {
     
     private func configSuperView() {
         self.addSubview(self.logoImageView)
+        self.addSubview(self.nameTextField)
         self.addSubview(self.emailTextField)
         self.addSubview(self.passwordTextField)
         self.addSubview(self.registerButton)
@@ -150,18 +168,27 @@ class RegisterScreen: UIView {
             self.logoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 150),
             self.logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -150),
             self.logoImageView.heightAnchor.constraint(equalToConstant: 80),
-            self.emailTextField.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 50),
+            
+            self.nameTextField.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 50),
+            self.nameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.nameTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.nameTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            self.emailTextField.topAnchor.constraint(equalTo: self.nameTextField.bottomAnchor, constant: 10),
             self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
+            
             self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 10),
             self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
             self.passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
             self.passwordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
+            
             self.registerButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 10),
             self.registerButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
             self.registerButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
             self.registerButton.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
+            
             self.bottomLabel.topAnchor.constraint(equalTo: self.registerButton.bottomAnchor, constant: 180),
             self.bottomLabel.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
             self.bottomLabel.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
