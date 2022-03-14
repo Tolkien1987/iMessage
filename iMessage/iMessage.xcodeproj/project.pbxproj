@@ -22,6 +22,9 @@
 		CE8249B227D53EED00FF581A /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8249AB27D53EEC00FF581A /* LoginScreen.swift */; };
 		CE8249B327D53EED00FF581A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8249AE27D53EED00FF581A /* RegisterVC.swift */; };
 		CE8249B427D53EED00FF581A /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8249B027D53EED00FF581A /* RegisterScreen.swift */; };
+		CEAC2EA027D787950046FF5B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC2E9F27D787950046FF5B /* HomeVC.swift */; };
+		CEAC2EA327D7897B0046FF5B /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC2EA227D7897B0046FF5B /* HomeScreen.swift */; };
+		CEAC2EA627D80FA70046FF5B /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC2EA527D80FA70046FF5B /* NavView.swift */; };
 		CEF0D8FE27D54BF9000C579E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEF0D8FD27D54BF9000C579E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		CE8249AB27D53EEC00FF581A /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		CE8249AE27D53EED00FF581A /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		CE8249B027D53EED00FF581A /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		CEAC2E9F27D787950046FF5B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		CEAC2EA227D7897B0046FF5B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		CEAC2EA527D80FA70046FF5B /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		CEF0D8FD27D54BF9000C579E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E15ACBD9DBA7C173E45ED07B /* Pods-iMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessage.debug.xcconfig"; path = "Target Support Files/Pods-iMessage/Pods-iMessage.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +140,7 @@
 			children = (
 				CE2F527827D6F4AE00BD3D35 /* Alert */,
 				CE2F526627D6CCB200BD3D35 /* Utils */,
+				CEAC2E9E27D787660046FF5B /* Home */,
 				CE8249A727D53EEC00FF581A /* Login */,
 				CE8249AC27D53EED00FF581A /* Register */,
 				CE82498D27D53B5C00FF581A /* AppDelegate.swift */,
@@ -194,6 +201,32 @@
 				CE8249B027D53EED00FF581A /* RegisterScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		CEAC2E9E27D787660046FF5B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC2EA427D78AD80046FF5B /* NavView */,
+				CEAC2EA127D789600046FF5B /* Screen */,
+				CEAC2E9F27D787950046FF5B /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CEAC2EA127D789600046FF5B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC2EA227D7897B0046FF5B /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CEAC2EA427D78AD80046FF5B /* NavView */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC2EA527D80FA70046FF5B /* NavView.swift */,
+			);
+			path = NavView;
 			sourceTree = "<group>";
 		};
 		D663A986CB27CBDB6F172CCB /* Frameworks */ = {
@@ -326,9 +359,12 @@
 				CE2F526C27D6D72D00BD3D35 /* Custom.swift in Sources */,
 				CE82498E27D53B5C00FF581A /* AppDelegate.swift in Sources */,
 				CE8249B227D53EED00FF581A /* LoginScreen.swift in Sources */,
+				CEAC2EA627D80FA70046FF5B /* NavView.swift in Sources */,
+				CEAC2EA327D7897B0046FF5B /* HomeScreen.swift in Sources */,
 				CE82499027D53B5C00FF581A /* SceneDelegate.swift in Sources */,
 				CE2F527227D6DB4600BD3D35 /* Extension+Button.swift in Sources */,
 				CE2F527A27D6F4C800BD3D35 /* Alert.swift in Sources */,
+				CEAC2EA027D787950046FF5B /* HomeVC.swift in Sources */,
 				CE8249B127D53EED00FF581A /* LoginVC.swift in Sources */,
 				CE8249B327D53EED00FF581A /* RegisterVC.swift in Sources */,
 			);
