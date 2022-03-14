@@ -166,22 +166,27 @@ class LoginScreen: UIView {
 
             self.loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
             self.loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
             self.logoImageView.topAnchor.constraint(equalTo: self.loginLabel.bottomAnchor, constant: 50),
             self.logoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 150),
             self.logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -150),
             self.logoImageView.heightAnchor.constraint(equalToConstant: 80),
+            
             self.emailTextField.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 50),
             self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
+            
             self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 10),
             self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
             self.passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
             self.passwordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
+            
             self.loginButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 10),
             self.loginButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
             self.loginButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
             self.loginButton.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
+            
             self.registerButton.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor, constant: 150),
             self.registerButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
             self.registerButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor)
