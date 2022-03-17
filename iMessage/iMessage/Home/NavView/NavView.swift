@@ -82,8 +82,7 @@ class NavView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "message")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        button.tintColor = .systemPink
-        button.addTarget(self, action: #selector(self.tappedConversation), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.tappedConversationButton), for: .touchUpInside)
         return button
     }()
     
@@ -91,20 +90,17 @@ class NavView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "contacts")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.contentMode = .scaleToFill
         button.addTarget(self, action: #selector(self.tappedContactButton), for: .touchUpInside)
         return button
     }()
     
-    @objc func tappedConversation() {
+    @objc func tappedConversationButton() {
         self.delegate?.typeScreenMessage(type: .conversation)
-        self.conversationButton.tintColor = .systemPink
-        self.contactButton.tintColor = .black
     }
     
     @objc func tappedContactButton() {
         self.delegate?.typeScreenMessage(type: .contact)
-        self.conversationButton.tintColor = .black
-        self.contactButton.tintColor = .systemPink
     }
     
     override init(frame: CGRect) {
@@ -118,11 +114,10 @@ class NavView: UIView {
         self.navBackgroundView.addSubview(self.navBar)
         self.navBar.addSubview(self.searchBar)
         self.navBar.addSubview(self.stackView)
-        self.stackView.addArrangedSubview(self.conversationButton)
-        self.stackView.addArrangedSubview(self.contactButton)
         self.searchBar.addSubview(self.searchLabel)
         self.searchBar.addSubview(self.searchButton)
-
+        self.stackView.addArrangedSubview(self.conversationButton)
+        self.stackView.addArrangedSubview(self.contactButton)
 
     }
     
@@ -141,13 +136,13 @@ class NavView: UIView {
         
             self.navBar.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.navBar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.navBar.trailingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.navBar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.navBar.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             self.searchBar.leadingAnchor.constraint(equalTo: self.navBar.leadingAnchor, constant: 30),
             self.searchBar.centerYAnchor.constraint(equalTo: self.navBar.centerYAnchor),
             self.searchBar.trailingAnchor.constraint(equalTo: self.stackView.leadingAnchor, constant: -20),
-            self.searchBar.heightAnchor.constraint(equalToConstant: 50),
+            self.searchBar.heightAnchor.constraint(equalToConstant: 55),
             
             self.stackView.trailingAnchor.constraint(equalTo: self.navBar.trailingAnchor, constant: -30),
             self.stackView.centerYAnchor.constraint(equalTo: self.navBar.centerYAnchor),
